@@ -29,8 +29,6 @@ matrix:
       env: TOXENV=pypy3
     - python: "2.7"
       env: TOXENV=checkers
-    - python: "2.7"
-      env: DOC=sphinx
     allow_failures:
     - env: TOXENV=nightly
     - env: TOXENV=py26
@@ -51,7 +49,6 @@ install:
 script:
 - if [[ $TRAVIS_PULL_REQUEST != 'false' ]] && [[ $TOXENV == 'checkers' ]]; then yapf -i isbnlib; fi
 - if [[ ! -z $TOXENV ]]; then tox -e $TOXENV; fi
-- if [[ $DOC == 'sphinx' ]]; then cd docs; sphinx-build -n -b html -d _build/.doctrees . _build/html; fi
 after_success:
 - if [[ $TOXENV == 'py27' ]]; then coveralls; fi
 notifications:
