@@ -38,7 +38,7 @@ setup(
     license='LGPL v3',
     description='A plugin for isbnlib, pulling metadata from porbase.org (portuguese books).',
     long_description=open('README.rst').read(),
-    keywords='ISBN, isbnlib, porbase, bibliographic-references',
+    keywords=['ISBN', 'isbnlib', 'porbase', 'bibliographic-references'],
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
