@@ -2,7 +2,7 @@
 # flake8: noqa
 # isort:skip_file
 
-# isbnlib_porbase - an isbnlib plugin for porbase.org
+# isbnlib_porbase -- an isbnlib plugin for porbase.org
 # Copyright (C) 2018  Alexandre Lima Conde
 
 # This program is free software: you can redistribute it and/or modify
