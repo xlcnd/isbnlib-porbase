@@ -105,4 +105,5 @@ ENV/
 yop.*
 .tasks
 .release*
+release.*
 
