@@ -18,10 +18,8 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
 from setuptools import setup
 from isbnlib_porbase import __version__
-
 
 setup(
     name='isbnlib_porbase',
@@ -31,14 +29,13 @@ setup(
     url='https://github.com/xlcnd/isbnlib_porbase',
     download_url='https://github.com/xlcnd/isbnlib_porbase/archive/v0.0.4.zip',
     packages=['isbnlib_porbase/'],
-    entry_points = {
-        'isbnlib.metadata': ['porbase=isbnlib_porbase:query']
-    },
+    entry_points={'isbnlib.metadata': ['porbase=isbnlib_porbase:query']},
     install_requires=["isbnlib>=3.7.3,<3.8.0"],
     license='LGPL v3',
-    description='A plugin for isbnlib, pulling metadata from porbase.org (portuguese books).',
+    description=
+    'A plugin for isbnlib that pulls metadata from porbase.org (portuguese books).',
     long_description=open('README.rst').read(),
-    keywords=['ISBN', 'isbnlib', 'porbase', 'bibliographic-references'],
+    keywords='ISBN isbnlib porbase bibliographic-references',
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
@@ -58,4 +55,6 @@ setup(
         'Topic :: Text Processing :: General',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
+    tests_require=['nose', 'coverage'],
+    test_suite='nose.collector',
 )
