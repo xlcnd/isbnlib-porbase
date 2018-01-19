@@ -20,11 +20,12 @@
 
 
 from setuptools import setup
+from isbnlib_porbase import __version__
 
 
 setup(
     name='isbnlib_porbase',
-    version='0.0.2',
+    version=__version__,
     author='xlcnd',
     author_email='xlcnd@outlook.com',
     url='https://github.com/xlcnd/isbnlib_porbase',
@@ -36,6 +37,7 @@ setup(
     install_requires=["isbnlib>=3.7.3,<3.8.0"],
     license='LGPL v3',
     description='A plugin for isbnlib, pulling metadata from porbase.org (portuguese books).',
+    long_description=open('README.rst').read(),
     keywords='ISBN, isbnlib, porbase, bibliographic-references',
     classifiers=[
         'Programming Language :: Python',
