@@ -25,8 +25,6 @@ def _get_text(topnode):
 
 def parser_porbase(xml):
     """Parse the response from the porbase service."""
-    #print(xml)
-    #print('-------------------------------------------------------------')
     if '<error>' in xml:
         return {}
     dom = parseString(xml)
