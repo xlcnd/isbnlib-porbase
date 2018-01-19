@@ -1,8 +1,8 @@
-.. image:: https://travis-ci.org/xlcnd/isbnlib_porbase.svg?branch=v0.0.2
+.. image:: https://travis-ci.org/xlcnd/isbnlib_porbase.svg?branch=v0.0.3
     :target: https://travis-ci.org/xlcnd/isbnlib_porbase
     :alt: Built Status
 
-.. image:: https://ci.appveyor.com/api/projects/status/fv1o5kybcx1njmgw/branch/v0.0.2?svg=true
+.. image:: https://ci.appveyor.com/api/projects/status/fv1o5kybcx1njmgw/branch/v0.0.3?svg=true
     :target: https://ci.appveyor.com/project/xlcnd/isbnlib-porbase
     :alt: Windows Built Status
 
