@@ -6,7 +6,8 @@ from xml.dom.minidom import parseString
 
 from isbnlib.dev import stdmeta
 from isbnlib.dev._bouth23 import u
-from isbnlib.dev._exceptions import (NoDataForSelectorError, RecordMappingError)
+from isbnlib.dev._exceptions import (NoDataForSelectorError,
+                                     RecordMappingError)
 from isbnlib.dev.webquery import query as wquery
 
 LOGGER = logging.getLogger(__name__)
