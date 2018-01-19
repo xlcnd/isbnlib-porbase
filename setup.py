@@ -14,7 +14,7 @@ from setuptools import setup
 
 
 setup(
-    name='isbnlib_porbase',  # <- adjust: dummy to name
+    name='isbnlib_porbase',
     version='0.0.1',
     author='xlcnd',
     author_email='xlcnd@outlook.com',
@@ -26,8 +26,8 @@ setup(
     },
     install_requires=["isbnlib>=3.7.3,<3.8.0"],
     license='LGPL v3',
-    description='A dummy plugin for isbnlib.',   # <- adjust
-    keywords='ISBN, dummy, _____________________',   # <- adjust
+    description='A plugin for isbnlib pulling metadata from porbase.org (portuguese books).',
+    keywords='ISBN, porbase, isbnlib',
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
