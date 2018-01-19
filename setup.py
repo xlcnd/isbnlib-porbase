@@ -29,7 +29,7 @@ setup(
     author='xlcnd',
     author_email='xlcnd@outlook.com',
     url='https://github.com/xlcnd/isbnlib_porbase',
-    download_url='https://github.com/xlcnd/isbnlib_porbase/archive/v0.0.3.zip',
+    download_url='https://github.com/xlcnd/isbnlib_porbase/archive/v0.0.4.zip',
     packages=['isbnlib_porbase/'],
     entry_points = {
         'isbnlib.metadata': ['porbase=isbnlib_porbase:query']
