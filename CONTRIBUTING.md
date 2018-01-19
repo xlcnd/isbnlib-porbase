@@ -24,7 +24,7 @@ adventure in open-source.
 6. Write tests for your code using `nose` and put then in the directory `isbnlib_porbase/test`
 7. Pass **all tests** and with **coverage > 90%**.
    Check the coverage in [Coveralls](https://coveralls.io) or locally with the command
-   `nosetests --with-coverage --cover-package=isbnlib`.
+   `nosetests --with-coverage --cover-package=isbnlib_porbase`.
 8. **Check if all requirements are fulfilled**!
 9. **Push** your local changes to GitHub and make there a **pull request**
    ([help](https://help.github.com/articles/using-pull-requests/))
