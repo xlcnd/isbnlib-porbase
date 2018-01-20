@@ -3,4 +3,4 @@ v0.0.2, 2018-01-19 -- fix pypi docs.
 v0.0.3, 2018-01-19 -- fix tox.
 v0.0.4, 2018-01-19 -- fix travis.
 v0.0.5, 2018-01-20 -- fix packg name.
-v0.0.6, 2018-01-20 -- TENTATIVE
+v0.0.6, 2018-01-20 -- change repo name.
