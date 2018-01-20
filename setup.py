@@ -2,7 +2,7 @@
 # flake8: noqa
 # isort:skip_file
 
-# isbnlib_porbase -- an isbnlib plugin for porbase.org
+# isbnlib-porbase -- an isbnlib plugin for porbase.org
 # Copyright (C) 2018  Alexandre Lima Conde
 
 # This program is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ from setuptools import setup
 from isbnlib_porbase import __version__
 
 setup(
-    name='isbnlib_porbase',
+    name='isbnlib-porbase',
     version=__version__,
     author='xlcnd',
     author_email='xlcnd@outlook.com',
