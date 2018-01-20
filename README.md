@@ -5,3 +5,11 @@ After install, a new metadata provider (`porbase`) is available in `isbnlib`.
 
 **WARNING** this software is at beta level!
 
+Anyway, give it a try with:
+
+```bash
+$ pip install isbnlib-porbase
+```
+
+
+
