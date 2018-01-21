@@ -5,3 +5,4 @@ v0.0.4, 2018-01-19 -- fix travis.
 v0.0.5, 2018-01-20 -- fix packg name.
 v0.0.6, 2018-01-20 -- change repo name.
 v0.0.7, 2018-01-21 -- add release source format.
+v0.0.8, 2018-01-21 -- TENTATIVE
