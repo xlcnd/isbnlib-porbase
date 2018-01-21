@@ -41,7 +41,8 @@ def parser_porbase(xml):
     recs['Authors'] = recs.get('Authors', u([])).split('|')
     recs['Year'] = ''.join([
         c for c in recs.get('Year', u(''))
-        if c in ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
+        if c.isdigit()
+ #       if c in ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
     ])
     return recs
 
