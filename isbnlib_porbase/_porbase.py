@@ -49,7 +49,6 @@ def _mapper(isbn, records):
     if not records:  # pragma: no cover
         LOGGER.debug('NoDataForSelectorError for %s', isbn)
         raise NoDataForSelectorError(isbn)
-        return {}
     try:
         canonical = {}
         canonical['ISBN-13'] = u(isbn)
