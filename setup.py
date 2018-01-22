@@ -27,7 +27,7 @@ setup(
     author='xlcnd',
     author_email='xlcnd@outlook.com',
     url='https://github.com/xlcnd/isbnlib-porbase',
-    download_url='https://github.com/xlcnd/isbnlib-porbase/archive/v0.0.9.zip',
+    download_url='https://github.com/xlcnd/isbnlib-porbase/archive/v0.1.0.zip',
     packages=['isbnlib_porbase/'],
     entry_points={'isbnlib.metadata': ['porbase=isbnlib_porbase:query']},
     install_requires=["isbnlib>=3.7.3,<3.8.0"],
