@@ -6,8 +6,6 @@ from xml.dom.minidom import parseString
 
 from isbnlib.dev import stdmeta
 from isbnlib.dev._bouth23 import u
-from isbnlib.dev._exceptions import (NoDataForSelectorError,
-                                     RecordMappingError)
 from isbnlib.dev.webquery import query as wquery
 
 LOGGER = logging.getLogger(__name__)
@@ -26,8 +24,10 @@ def _get_text(topnode):
 
 def parser_porbase(xml):
     """Parse the response from the porbase service."""
+    # handle special case
     if '<error>' in xml:
         return {}
+    # parse xml and extract canonical fields
     dom = parseString(xml)
     keys = ('Title', 'Authors', 'Publisher', 'Year', 'Language')
     fields = ('dc:title', 'dc:creator', 'dc:publisher', 'dc:date',
@@ -37,33 +37,27 @@ def parser_porbase(xml):
         nodes = dom.getElementsByTagName("dc")[0].getElementsByTagName(field)
         txt = '|'.join([_get_text(node) for node in nodes])
         recs[key] = u(txt)
-    recs['Publisher'] = recs.get('Publisher', u('')).split('|')[0]
-    recs['Authors'] = recs.get('Authors', u([])).split('|')
-    recs['Year'] = ''.join(c for c in recs.get('Year', u('')) if c.isdigit())
+    # cleanning
+    recs['Publisher'] = recs['Publisher'].split('|')[0]
+    recs['Authors'] = recs['Authors'].split('|')
+    recs['Year'] = ''.join(c for c in recs['Year'] if c.isdigit())
+    recs['Title'] = recs['Title'].replace(' :', ':').replace('<', '').replace(
+        '>', '')
     return recs
 
 
 def _mapper(isbn, records):
-    """Map: canonical <- records."""
-    # canonical: ISBN-13, Title, Authors, Publisher, Year, Language
+    """Make records canonical.
+
+       canonical: ISBN-13, Title, Authors, Publisher, Year, Language
+    """
+    # handle special case
     if not records:  # pragma: no cover
-        LOGGER.debug('NoDataForSelectorError for %s', isbn)
-        raise NoDataForSelectorError(isbn)
-    try:
-        canonical = {}
-        canonical['ISBN-13'] = u(isbn)
-        canonical['Title'] = records.get('Title',
-                                         u('')).replace(' :', ':').replace(
-                                             '<', '').replace('>', '')
-        canonical['Authors'] = records.get('Authors', u([]))
-        canonical['Publisher'] = records.get('Publisher', u(''))
-        canonical['Year'] = records.get('Year', u(''))
-        canonical['Language'] = records.get('Language', u(''))
-    except:  # pragma: no cover
-        LOGGER.debug("RecordMappingError for %s with data %s", isbn, records)
-        raise RecordMappingError(isbn)
+        return {}
+    # add ISBN-13
+    records['ISBN-13'] = u(isbn)
     # call stdmeta for extra cleanning and validation
-    return stdmeta(canonical)
+    return stdmeta(records)
 
 
 def query(isbn):
@@ -72,4 +66,5 @@ def query(isbn):
         SERVICE_URL.format(isbn=isbn), user_agent=UA, parser=parser_porbase)
     if not data:  # pragma: no cover
         LOGGER.debug('No data from porbase.org for isbn %s', isbn)
+        return {}
     return _mapper(isbn, data)
