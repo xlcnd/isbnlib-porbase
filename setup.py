@@ -30,7 +30,7 @@ setup(
     download_url='https://github.com/xlcnd/isbnlib-porbase/archive/v0.1.1.zip',
     packages=['isbnlib_porbase/'],
     entry_points={'isbnlib.metadata': ['porbase=isbnlib_porbase:query']},
-    install_requires=["isbnlib>=3.8.2,<3.9.0"],
+    install_requires=["isbnlib>=3.8.3,<3.9.0"],
     license='LGPL v3',
     description=
     'A plugin for isbnlib that pulls metadata from porbase.org (portuguese books).',
