@@ -33,23 +33,27 @@ def parser_porbase(xml):
     fields = ('dc:title', 'dc:creator', 'dc:publisher', 'dc:date',
               'dc:language')
     recs = {}
-    for key, field in zip(keys, fields):
-        nodes = dom.getElementsByTagName("dc")[0].getElementsByTagName(field)
-        txt = '|'.join([_get_text(node) for node in nodes])
-        recs[key] = u(txt)
-    # cleanning
-    recs['Publisher'] = recs['Publisher'].split('|')[0]
-    recs['Authors'] = recs['Authors'].split('|')
-    recs['Year'] = ''.join(c for c in recs['Year'] if c.isdigit())
-    recs['Title'] = recs['Title'].replace(' :', ':').replace('<', '').replace(
-        '>', '')
+    try:
+        for key, field in zip(keys, fields):
+            nodes = dom.getElementsByTagName("dc")[0]\
+                .getElementsByTagName(field)
+            txt = '|'.join([_get_text(node) for node in nodes])
+            recs[key] = u(txt)
+        # cleanning
+        recs['Publisher'] = recs['Publisher'].split('|')[0]
+        recs['Authors'] = recs['Authors'].split('|')
+        recs['Year'] = ''.join(c for c in recs['Year'] if c.isdigit())
+        recs['Title'] = recs['Title'].replace(' :', ':').replace('<', '')\
+            .replace('>', '')
+    except IndexError:
+        LOGGER.debug('Check the parsing for porbase.org for isbn %s', isbn)
     return recs
 
 
 def _mapper(isbn, records):
     """Make records canonical.
 
-       canonical: ISBN-13, Title, Authors, Publisher, Year, Language
+    canonical: ISBN-13, Title, Authors, Publisher, Year, Language
     """
     # handle special case
     if not records:  # pragma: no cover
