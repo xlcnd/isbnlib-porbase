@@ -46,7 +46,7 @@ def parser_porbase(xml):
         recs['Title'] = recs['Title'].replace(' :', ':').replace('<', '')\
             .replace('>', '')
     except IndexError:
-        LOGGER.debug('Check the parsing for porbase.org for isbn %s', isbn)
+        LOGGER.debug('Check the parsing for porbase.org (possible error!)')
     return recs
 
 
