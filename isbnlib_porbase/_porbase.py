@@ -17,7 +17,7 @@ def _get_text(topnode):
     """Get the text values in the child nodes."""
     text = ""
     for node in topnode.childNodes:
-        if node.nodeType == node.TEXT_NODE:
+        if node.nodeType == node.TEXT_NODE:  # pragma: no cover
             text = text + node.data
     return text
 
