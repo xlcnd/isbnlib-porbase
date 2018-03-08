@@ -42,7 +42,7 @@ def parser_porbase(xml):
         # cleanning
         recs['Publisher'] = recs['Publisher'].split('|')[0]
         recs['Authors'] = recs['Authors'].split('|')
-        recs['Year'] = ''.join(c for c in recs['Year'] if c.isdigit())
+        recs['Year'] = u(''.join(c for c in recs['Year'] if c.isdigit())[:4])
         recs['Title'] = recs['Title'].replace(' :', ':').replace('<', '')\
             .replace('>', '')
     except IndexError:
