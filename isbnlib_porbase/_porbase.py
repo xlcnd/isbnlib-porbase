@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Query the porbase.org service for metadata."""
+"""Query the urn.porbase.org service for metadata."""
 
 import logging
 from xml.dom.minidom import parseString
@@ -65,7 +65,7 @@ def _mapper(isbn, records):
 
 
 def query(isbn):
-    """Query the porbase.org service for metadata."""
+    """Query the urn.porbase.org service for metadata."""
     data = wquery(
         SERVICE_URL.format(isbn=isbn), user_agent=UA, parser=parser_porbase)
     if not data:  # pragma: no cover
