@@ -43,8 +43,8 @@ def parser_porbase(xml):
         recs['Publisher'] = recs['Publisher'].split('|')[0]
         recs['Authors'] = recs['Authors'].split('|')
         recs['Year'] = u(''.join(c for c in recs['Year'] if c.isdigit())[:4])
-        recs['Title'] = recs['Title'].replace(' :', ':').replace('<', '')\
-            .replace('>', '')
+        recs['Title'] = recs['Title'].replace(': romance', '')\
+            .replace(' :', ':').replace('<', '').replace('>', '')
     except IndexError:
         LOGGER.debug('Check the parsing for porbase.org (possible error!)')
     return recs
