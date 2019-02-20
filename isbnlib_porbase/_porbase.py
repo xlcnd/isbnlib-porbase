@@ -12,6 +12,8 @@ LOGGER = logging.getLogger(__name__)
 UA = 'isbnlib (gzip)'
 SERVICE_URL = 'http://urn.porbase.org/isbn/dc/xml?id={isbn}'
 
+# TODO 1. add 'THROTTLING = 3' needs isbnlib-3.9.6
+
 
 def _get_text(topnode):
     """Get the text values in the child nodes."""
@@ -68,6 +70,7 @@ def query(isbn):
     """Query the urn.porbase.org service for metadata."""
     data = wquery(
         SERVICE_URL.format(isbn=isbn), user_agent=UA, parser=parser_porbase)
+    # TODO 2. add 'throttling=THROTTLING)' needs isbnlib-3.9.6
     if not data:  # pragma: no cover
         LOGGER.debug('No data from porbase.org for isbn %s', isbn)
         return {}
