@@ -23,12 +23,7 @@ matrix:
     - env: TOXENV=nightly
 install:
 - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pip3 install tox; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pip3 install -r requirements.txt; fi
 - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then pip install tox; fi
-- if [[ $TRAVIS_OS_NAME == 'linux' ]]; then pip install -r requirements.txt; fi
-- if [[ $TOXENV == 'checkers' ]]; then pip install -r requirements.txt; fi
-- if [[ $TOXENV == 'checkers' ]]; then pip install flake8; fi
-- if [[ $TOXENV == 'checkers' ]]; then pip install pep8-naming; fi
 - if [[ $TOXENV == 'py35' ]]; then pip install coveralls; fi
 - if [[ $TRAVIS_PULL_REQUEST != 'false' ]]; then pip install yapf; fi
 script:
