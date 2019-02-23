@@ -47,4 +47,4 @@ install:
 build: false
 
 test_script:
-  - - "%TOXPYTHON% -m tox -e %TOXENV%"
+  - "%TOXPYTHON% -m tox -e %TOXENV%"
