@@ -7,7 +7,7 @@ branches:
 matrix:
     include:
     - os: osx
-      language: python
+      language: generic
       env: TOXENV=py36
     - python: "2.7"
       env: TOXENV=py27
