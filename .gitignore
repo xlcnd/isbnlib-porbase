@@ -106,6 +106,8 @@ yop.*
 .tasks
 .release*
 release.*
+
+# custom
 TODO
 LAB/
-
+.vscode

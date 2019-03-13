@@ -4,7 +4,8 @@ branches:
     - dev
     - /v0.1.1/
 cache:
-    - '%LOCALAPPDATA%\pip\Cache'
+  - '%LOCALAPPDATA%\pip\Cache'
+
 environment:
   matrix:
     - TOXENV: "py36"
