@@ -11,4 +11,4 @@ v0.1.0, 2018-01-24 -- use isbnlib-3.8.x versions.
 v0.1.1, 2018-03-09 -- new pypi name.
 v0.1.2, 2018-07-17 -- use isbnlib-3.9.
 v0.1.3, 2020-01-17 -- (NOT RELEASED).
-v1.0.0, 2020-01-17 -- allow isbnlib-3.10.*.
+v1.0.0, 2020-03-23 -- allow isbnlib-3.10.*.
