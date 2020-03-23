@@ -3,7 +3,7 @@
 # pylint: skip-file
 from ._porbase import query
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 __plugin_author__ = 'xlcnd'
 __plugin_description__ = 'Metadata for Portuguese books from porbase.pt'
