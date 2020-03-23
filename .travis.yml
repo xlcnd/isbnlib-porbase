@@ -9,6 +9,8 @@ matrix:
     - os: osx
       language: generic
       env: TOXENV=py37
+    - python: "3.7"
+      env: TOXENV=py37
     - python: "2.7"
       env: TOXENV=py27
     - python: "3.6"
@@ -21,10 +23,6 @@ matrix:
       env: TOXENV=checkers
     - python: "3.6"
       env: ENV=dev
-    - dist: xenial
-      language: python
-      python: 3.7
-      env: TOXENV=py37
   allow_failures:
     - env: TOXENV=nightly
     - env: ENV=dev
