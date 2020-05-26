@@ -33,7 +33,3 @@ For available plugins check_ here.
 
 
 .. _check: https://pypi.python.org/pypi?%3Aaction=search&term=isbnlib_&submit=search
-
-
-
-![tests]()
