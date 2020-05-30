@@ -13,6 +13,7 @@ def test_query():
     assert_equals(len(repr(query('9789727576807'))) > 100, True)
     assert_equals(len(repr(query('9789720049612'))) > 100, True)
     assert_equals(len(repr(query('9789727228133'))) > 100, True)
+    assert_equals(len(repr(query('9789897021824'))) > 100, True)
 
 
 def test_query_missing():
