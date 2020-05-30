@@ -46,7 +46,7 @@ def parser_porbase(xml):
         recs['Year'] = u(''.join(c for c in recs['Year'] if c.isdigit())[:4])
         recs['Title'] = recs['Title'].replace(': romance', '')\
             .replace(' :', ':').replace('<', '').replace('>', '')
-    except Exception as exc:
+    except Exception as exc:  # pragma: no cover
         LOGGER.debug(
             'Check the parsing for porbase.org (%r)', exc, exc_info=True)
     return recs
