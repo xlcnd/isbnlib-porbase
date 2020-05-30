@@ -42,6 +42,8 @@ def parser_porbase(xml):
         # cleanning
         recs['Publisher'] = recs['Publisher'].split('|')[0]
         recs['Authors'] = recs['Authors'].split('|')
+        authors = recs['Authors'].split('|')
+        recs['Authors'] = [author.strip('0123456789- ') for author in authors]
         recs['Year'] = u(''.join(c for c in recs['Year'] if c.isdigit())[:4])
         recs['Title'] = recs['Title'].replace(': romance', '')\
             .replace(' :', ':').replace('<', '').replace('>', '')
