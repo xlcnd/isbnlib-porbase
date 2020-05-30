@@ -110,4 +110,7 @@ release.*
 # custom
 TODO
 LAB/
-.vscode
+isbnlib_porbase/.vscode/
+*settings.json*
+.changelog*
+
