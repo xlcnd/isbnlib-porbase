@@ -1,18 +1,7 @@
-.. image:: https://coveralls.io/repos/github/xlcnd/isbnlib-porbase/badge.svg?branch=dev
-    :target: https://coveralls.io/github/xlcnd/isbnlib-porbase?branch=dev
-    :alt: Coverage Status
 
 .. image:: https://github.com/xlcnd/isbnlib-porbase/workflows/tests/badge.svg
     :target: https://github.com/xlcnd/isbnlib-porbase/actions
     :alt: Built Status
-
-.. image:: https://travis-ci.org/xlcnd/isbnlib-porbase.svg?branch=dev
-    :target: https://travis-ci.org/xlcnd/isbnlib-porbase
-    :alt: Built Status
-
-.. image:: https://ci.appveyor.com/api/projects/status/github/xlcnd/isbnlib-porbase?branch=dev&svg=true
-    :target: https://ci.appveyor.com/project/xlcnd/isbnlib-porbase
-    :alt: Windows Built Status
 
 .. image:: https://img.shields.io/github/issues/xlcnd/isbnlib-porbase/bug.svg?label=bugs&style=flat
     :target: https://github.com/xlcnd/isbnlib-porbase/labels/bug

@@ -3,7 +3,7 @@
 # isort:skip_file
 
 # isbnlib-porbase -- an isbnlib plugin for porbase (urn.porbase.org Portugal)
-# Copyright (C) 2018-2019  Alexandre Lima Conde
+# Copyright (C) 2018-2021  Alexandre Lima Conde
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Lesser General Public License as published by
@@ -44,6 +44,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
         'Operating System :: OS Independent',
         'Development Status :: 5 - Production/Stable',
