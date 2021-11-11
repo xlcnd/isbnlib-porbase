@@ -85,4 +85,4 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov coverage
-        pytest -q --cov=isbnlib_porbase --cov-fail-under=90 isbnlib_porbase\test\test*.py
+        pytest -q --cov=isbnlib_porbase --cov-fail-under=90 isbnlib_porbase\test\
