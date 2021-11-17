@@ -15,6 +15,13 @@
 
 A metadata plugin for ``isbnlib`` (https://pypi.python.org/pypi/isbnlib) using the service ``urn.porbase.org`` (for books in portuguese).
 
+To install, from the command line, enter (in some cases you have to precede the command with ``sudo``):
+
+.. code-block:: bash
+
+    $ pip install isbnlib-porbase
+
+
 After install, a new metadata provider (``porbase``) is available in isbnlib.
 
 For available plugins check_ here.
